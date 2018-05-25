@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-class SelectedTodo extends Component {
+class ClickedTodo extends Component {
     render() {
         // console.log('todoSelected');
         // console.log(this.props.todoSelected);
-        if (this.props.todoSelected && this.props.todoSelected.text) {
+        if (this.props.todoClicked && this.props.todoClicked.text) {
             return (
-                <li>{this.props.todoSelected.text}</li>
+                <li>{this.props.todoClicked.text}</li>
             )
         } else {
             return (
@@ -20,9 +20,9 @@ class SelectedTodo extends Component {
 function mapStateToProps(state) {
     return {
         todos: state.todos,
-        todoSelected: state.todoSelected
+        todoClicked: state.todoClicked
     }
 }
 
 
-export default connect(mapStateToProps)(SelectedTodo);
+export default connect(mapStateToProps)(ClickedTodo);

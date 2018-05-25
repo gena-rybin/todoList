@@ -23,10 +23,10 @@ export function selectedAction(todo) {
 }
 
 // new "state", because "reducer" is in separate file from todos.js and added in combineReducers
-export function selectedTodoAction(todo) {
+export function clickedTodoAction(todo) {
     console.log('action, selected: ', todo);
     return {
-        type: 'SELECTED_TODO',
+        type: 'CLICKED_TODO',
         payload: todo
     }
 }

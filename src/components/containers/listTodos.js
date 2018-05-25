@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
-import {selectedTodoAction} from '../../actions'  // new "state", because "reducer" is in separate file from todos.js and added in combineReducers
+import {clickedTodoAction} from '../../actions'  // new "state", because "reducer" is in separate file from todos.js and added in combineReducers
 import {selectedAction} from '../../actions'  // same "state" as in todos.js
 import {removedTodoAction} from '../../actions'
 
@@ -60,7 +60,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        selectedTodo: bindActionCreators(selectedTodoAction, dispatch),
+        selectedTodo: bindActionCreators(clickedTodoAction, dispatch),
         selected: bindActionCreators(selectedAction, dispatch),
         removedTodo: bindActionCreators(removedTodoAction, dispatch)
     }
