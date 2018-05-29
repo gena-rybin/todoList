@@ -6,16 +6,20 @@ import NewTodo from '../../containers/new-todo';
 import SelectedTodo from '../../containers/selected-todo';
 import ListTodosDeleted from '../../containers/todos-deleted';
 
-export default class TodoPage extends Component {
+import {connect} from "react-redux";
+
+class TodoPage extends Component {
     state = {
         toMain: false,
     };
-
 
     render() {
         if (this.state.toMain === true) {
             return <Redirect to='/' />
         }
+
+        let listTodosDuplicated = !!this.props.todos && !!this.props.todos.length && <ListTodosDuplicated />;
+        const hr_listTodosDuplicated = !!this.props.todos && !!this.props.todos.length && <hr/>;
 
         return (
             <div className={'container'}>
@@ -25,11 +29,11 @@ export default class TodoPage extends Component {
                 <NewTodo />
                 <ListTodos />
 
-                <hr/>
-                <ListTodosDuplicated />
+                {hr_listTodosDuplicated}
+                {listTodosDuplicated}
                 <hr/>
                 <h4>selected:</h4>
-                <SelectedTodo></SelectedTodo>
+                <SelectedTodo />
 
                 <hr/>
                 <ListTodosDeleted />
@@ -46,3 +50,13 @@ export default class TodoPage extends Component {
     };
 
 }
+
+function mapStateToProps(state) {
+    return {
+        todos: state.todos,
+        todoSelected: state.todoSelected,
+        // todoRemoved: state.todoRemoved
+    }
+}
+export default connect(mapStateToProps)(TodoPage);
+
