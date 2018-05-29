@@ -3,7 +3,8 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
 import {clickedTodoAction} from '../../actions'  // new "state", because "reducer" is in separate file from todos.js and added in combineReducers
 import {selectedAction} from '../../actions'  // same "state" as in todos.js
-import {removedTodoAction} from '../../actions'
+import {deleteTodoAction} from '../../actions'
+import {deletedTodosAction} from '../../actions'
 
 class ListTodos extends Component {
 
@@ -38,8 +39,9 @@ class ListTodos extends Component {
                                 <button onClick={() => {
                                         console.log('deletion clicked');
                                         this.handleClick;
-                                        this.props.removedTodo(todo)}}>
-                                    remove
+                                        this.props.deleteTodo(todo);
+                                        this.props.deletedTodos(todo)}}>
+                                    delete
                                 </button>
                             </li>
                     )}
@@ -61,7 +63,8 @@ function mapDispatchToProps(dispatch) {
     return {
         clickedTodo: bindActionCreators(clickedTodoAction, dispatch),
         selected: bindActionCreators(selectedAction, dispatch),
-        removedTodo: bindActionCreators(removedTodoAction, dispatch)
+        deleteTodo: bindActionCreators(deleteTodoAction, dispatch),
+        deletedTodos: bindActionCreators(deletedTodosAction, dispatch)
     }
 }
 

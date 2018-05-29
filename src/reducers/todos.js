@@ -42,8 +42,8 @@ export default function (state=STARTING_TODOS, action) {
                     completed: false
                 }
             ];
-        case 'REMOVE_TODO':
-            console.log('REMOVE_TODO');
+        case 'DELETE_TODO':
+            console.log('DELETE_TODO');
             // console.log(state.slice().filter(item => {
             //     return item.id !== action.payload.id
             // }));

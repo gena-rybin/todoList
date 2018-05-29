@@ -6,7 +6,7 @@ class ListTodosDuplicated extends Component {
     render() {
         return (
             <div>
-                <p>todos duplicated:</p>
+                <h4>duplicated:</h4>
                 {this.props.todos.map((todo) =>
                     <li key={todo.id}>
                         {todo.text}, {todo.selected ? 1 : 2} ({todo.id})

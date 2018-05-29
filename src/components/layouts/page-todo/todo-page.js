@@ -4,6 +4,7 @@ import ListTodos from '../../containers/listTodos';
 import ListTodosDuplicated from '../../containers/listTodosDupl';
 import NewTodo from '../../containers/new-todo';
 import SelectedTodo from '../../containers/selected-todo';
+import ListTodosDeleted from '../../containers/todos-deleted';
 
 export default class TodoPage extends Component {
     state = {
@@ -27,8 +28,11 @@ export default class TodoPage extends Component {
                 <hr/>
                 <ListTodosDuplicated />
                 <hr/>
-                <p>Todo Selected:</p>
+                <h4>selected:</h4>
                 <SelectedTodo></SelectedTodo>
+
+                <hr/>
+                <ListTodosDeleted />
 
             </div>
         );

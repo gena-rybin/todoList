@@ -31,11 +31,20 @@ export function clickedTodoAction(todo) {
     }
 }
 
-export function removedTodoAction(todo) {
+export function deleteTodoAction(todo) {
     // console.log('removedTodoAction, todo to remove: ', todo);
     // console.log('removedTodoAction, todos: ', todos);
     return {
-        type: 'REMOVE_TODO',
+        type: 'DELETE_TODO',
+        payload: todo
+    }
+}
+
+export function deletedTodosAction(todo) {
+    // console.log('removedTodoAction, todo to remove: ', todo);
+    // console.log('removedTodoAction, todos: ', todos);
+    return {
+        type: 'DELETED_TODOS',
         payload: todo
     }
 }
