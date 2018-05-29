@@ -15,7 +15,7 @@ export function newToDoAction (text) {
 
 // same "state" as in todos.js
 export function selectedAction(todo) {
-    console.log('action, NEW selected: ', todo);
+    // console.log('action, NEW selected: ', todo);
     return {
         type: 'SELECTED',
         payload: todo
@@ -31,12 +31,11 @@ export function clickedTodoAction(todo) {
     }
 }
 
-export function removedTodoAction(todos, todo) {
-    console.log('removedTodoAction, todo to remove: ', todo);
-    console.log('removedTodoAction, todos: ', todos);
+export function removedTodoAction(todo) {
+    // console.log('removedTodoAction, todo to remove: ', todo);
+    // console.log('removedTodoAction, todos: ', todos);
     return {
         type: 'REMOVE_TODO',
-        todos: todos,
-        todoToRemove: todo
+        payload: todo
     }
 }

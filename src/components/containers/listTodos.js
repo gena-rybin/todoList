@@ -23,23 +23,22 @@ class ListTodos extends Component {
     render() {
         console.log('ListTodos');
         console.log(this.props.todos);
-        console.log('todoSelected');
-        console.log(this.props.todoSelected);
-
 
         return (
                 <div>
                     {this.props.todos.map((todo, i, todos) =>
                             <li key={todo.id}
                                 onClick={() => {
+                                                console.log('selection clicked');
                                                 this.props.selected(todo);
-                                                this.props.selectedTodo(todo);
+                                                this.props.clickedTodo(todo);
                                 }}
                             >
                                 {todo.text}, {todo.selected ? 1 : 2} ({todo.id})
                                 <button onClick={() => {
+                                        console.log('deletion clicked');
                                         this.handleClick;
-                                        this.props.removedTodo(todos, todo)}}>
+                                        this.props.removedTodo(todo)}}>
                                     remove
                                 </button>
                             </li>
@@ -60,7 +59,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        selectedTodo: bindActionCreators(clickedTodoAction, dispatch),
+        clickedTodo: bindActionCreators(clickedTodoAction, dispatch),
         selected: bindActionCreators(selectedAction, dispatch),
         removedTodo: bindActionCreators(removedTodoAction, dispatch)
     }

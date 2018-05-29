@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e8345c8-eddb-485c-8ed5-7c5b4c2d4b7c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/containers/listTodosDupl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/containers/listTodos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/listTodos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/containers/selected-todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/selected-todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/containers/new-todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/new-todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/page-todo/todo-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/page-todo/todo-page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/todo-selected.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todo-clicked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/todo-removed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/todos.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,17 +27,11 @@
       <file leaf-file-name="todo-page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/layouts/page-todo/todo-page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-end-line="2" />
+            <state relative-caret-position="459">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,8 +39,11 @@
       <file leaf-file-name="new-todo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/containers/new-todo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +51,20 @@
       <file leaf-file-name="listTodos.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/containers/listTodos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+            <state relative-caret-position="317">
+              <caret line="21" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listTodosDupl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/containers/listTodosDupl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -62,8 +75,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="429">
+              <caret line="37" column="26" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -71,50 +84,8 @@
       <file leaf-file-name="todos.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducers/todos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todo-clicked.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/todo-clicked.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selected-todo.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/containers/selected-todo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todo-removed.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/todo-removed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -132,11 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>quot</find>
-      <find>entry</find>
-      <find>quo</find>
-      <find>6</find>
-      <find>mptbp.medpagetoday.com</find>
       <find>publi</find>
       <find>main</find>
       <find>sty</find>
@@ -159,9 +125,14 @@
       <find>toAbout</find>
       <find>bindActionCreators</find>
       <find>item</find>
-      <find>selected</find>
-      <find>selectedTodo</find>
       <find>STARTING_TODOS</find>
+      <find>selectedTodo</find>
+      <find>selected</find>
+      <find>todoRemoved</find>
+      <find>handleClick</find>
+      <find>clickedTodo</find>
+      <find>REMOVE_TODO</find>
+      <find>todoSelected</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -192,18 +163,20 @@
         <option value="$PROJECT_DIR$/src/reducers/new-todo.js" />
         <option value="$PROJECT_DIR$/src/components/containers/active-todo.ts" />
         <option value="$PROJECT_DIR$/src/components/containers/selected-todo.ts" />
-        <option value="$PROJECT_DIR$/src/components/layouts/page-todo/todo-page.js" />
         <option value="$PROJECT_DIR$/src/components/containers/selected-t.js" />
         <option value="$PROJECT_DIR$/src/reducers/todo-remove.js" />
         <option value="$PROJECT_DIR$/src/reducers/todo-removed.js" />
-        <option value="$PROJECT_DIR$/src/reducers/todos.js" />
         <option value="$PROJECT_DIR$/src/reducers/todo-selected.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/new-todo.js" />
-        <option value="$PROJECT_DIR$/src/components/containers/listTodos.js" />
         <option value="$PROJECT_DIR$/src/reducers/todo-clicked.js" />
-        <option value="$PROJECT_DIR$/src/actions/index.js" />
-        <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/containers/selected-todo.js" />
+        <option value="$PROJECT_DIR$/src/components/containers/new-todo.js" />
+        <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/index.js" />
+        <option value="$PROJECT_DIR$/src/components/containers/listTodosDuplicated.js" />
+        <option value="$PROJECT_DIR$/src/components/layouts/page-todo/todo-page.js" />
+        <option value="$PROJECT_DIR$/src/reducers/todos.js" />
+        <option value="$PROJECT_DIR$/src/components/containers/listTodos.js" />
+        <option value="$PROJECT_DIR$/src/components/containers/listTodosDupl.js" />
       </list>
     </option>
   </component>
@@ -230,9 +203,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="735" />
-    <option name="y" value="117" />
-    <option name="width" value="1189" />
+    <option name="x" value="595" />
+    <option name="y" value="125" />
+    <option name="width" value="1334" />
     <option name="height" value="925" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -354,28 +327,28 @@
       <workItem from="1527005876929" duration="3789000" />
       <workItem from="1527059407100" duration="15690000" />
       <workItem from="1527154730928" duration="22540000" />
-      <workItem from="1527250265383" duration="2289000" />
+      <workItem from="1527250265383" duration="8128000" />
+      <workItem from="1527584263634" duration="6929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74582000" />
+    <option name="totallyTimeSpent" value="87350000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="735" y="117" width="1189" height="925" extended-state="0" />
+    <frame x="595" y="125" width="1334" height="925" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21471927" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50042623" side_tool="true" weight="0.19975491" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32965687" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49957374" weight="0.13357843" />
-      <window_info anchor="bottom" id="RNConsole" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24126172" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32965687" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49957374" visible="true" weight="0.17034313" />
+      <window_info anchor="bottom" id="RNConsole" order="8" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -385,6 +358,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32965687" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,13 +376,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/layouts/page-not-found/not-found-page.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -612,13 +579,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/layouts/page-not-found/about-page.component.js" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -683,79 +643,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/layouts/page-todo/todo-page.js">
+    <entry file="file://$PROJECT_DIR$/src/reducers/todo-removed.js" />
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/todo-removed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/new-todo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/todos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/listTodos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/containers/selected-todo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="9" column="54" lean-forward="true" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/todo-clicked.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="68">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/containers/selected-todo.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="89">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/layouts/page-todo/todo-page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/new-todo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/todos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/listTodos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="21" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/containers/listTodosDupl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

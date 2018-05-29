@@ -22,12 +22,18 @@ const STARTING_TODOS = [
 export default function (state=STARTING_TODOS, action) {
     switch (action.type) {
         case 'SELECTED':
-            console.log('state', state);
-            console.log('action', action);
+            console.log('SELECTED');
+            // console.log('action', action);
             return state.map(todo => {
                 return Object.assign({}, todo, {selected: todo.id === action.payload.id});
             });
+        case 'SHOW_TODOS':
+            console.log('SHOW_TODOS');
+            return [
+                ...state
+            ];
         case 'ADD_TODO':
+            console.log('ADD_TODO');
             return [
                 ...state,
                 {
@@ -36,6 +42,14 @@ export default function (state=STARTING_TODOS, action) {
                     completed: false
                 }
             ];
+        case 'REMOVE_TODO':
+            console.log('REMOVE_TODO');
+            // console.log(state.slice().filter(item => {
+            //     return item.id !== action.payload.id
+            // }));
+            return state.slice().filter(item => {
+                return item.id !== action.payload.id
+            });
         default: return state;
     }
 }

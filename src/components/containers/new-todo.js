@@ -10,7 +10,10 @@ class NewTodo extends Component {
 
         return (
             <div>
-                <form onSubmit={() => this.props.newToDoHandler(inputText.value)}>
+                <form onSubmit={() => {
+                    if (!inputText.value.trim()) {return}
+                    this.props.newToDoHandler(inputText.value);
+                    inputText.value = '';}}>
                     <input ref={inputTag => {inputText=inputTag}}/>
                 </form>
             </div>

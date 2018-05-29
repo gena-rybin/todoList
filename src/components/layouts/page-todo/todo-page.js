@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect} from "react-router-dom";
 import ListTodos from '../../containers/listTodos';
+import ListTodosDuplicated from '../../containers/listTodosDupl';
 import NewTodo from '../../containers/new-todo';
 import SelectedTodo from '../../containers/selected-todo';
 
@@ -23,6 +24,8 @@ export default class TodoPage extends Component {
                 <NewTodo />
                 <ListTodos />
 
+                <hr/>
+                <ListTodosDuplicated />
                 <hr/>
                 <p>Todo Selected:</p>
                 <SelectedTodo></SelectedTodo>
