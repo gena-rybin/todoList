@@ -22,18 +22,25 @@ const STARTING_TODOS = [
 export default function (state=STARTING_TODOS, action) {
     switch (action.type) {
         case 'SELECTED':
-            console.log('SELECTED');
+            // console.log('SELECTED');
             // console.log('action', action);
             return state.map(todo => {
                 return Object.assign({}, todo, {selected: todo.id === action.payload.id});
             });
+        case 'TOGGLE_COMPLETED':
+            // console.log('TOGGLE_COMPLETED');
+            // console.log('action', action);
+            return state.map(todo => {
+                return Object.assign({}, todo, {completed: (todo.id === action.payload.id) ? !action.payload.completed
+                                                                                            : todo.completed});
+            });
         case 'SHOW_TODOS':
-            console.log('SHOW_TODOS');
+            // console.log('SHOW_TODOS');
             return [
                 ...state
             ];
         case 'ADD_TODO':
-            console.log('ADD_TODO');
+            // console.log('ADD_TODO');
             return [
                 ...state,
                 {
@@ -43,7 +50,7 @@ export default function (state=STARTING_TODOS, action) {
                 }
             ];
         case 'DELETE_TODO':
-            console.log('DELETE_TODO');
+            // console.log('DELETE_TODO');
             // console.log(state.slice().filter(item => {
             //     return item.id !== action.payload.id
             // }));

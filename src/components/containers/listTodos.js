@@ -5,6 +5,7 @@ import {clickedTodoAction} from '../../actions'  // new "state", because "reduce
 import {selectedAction} from '../../actions'  // same "state" as in todos.js
 import {deleteTodoAction} from '../../actions'
 import {deletedTodosAction} from '../../actions'
+import {toggleCompleteAction} from '../../actions'
 
 class ListTodos extends Component {
 
@@ -15,16 +16,13 @@ class ListTodos extends Component {
     // }
 
     handleClick = e => {
-        // e.preventDefault();
+        e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
         e.nativeEvent.stopImmediatePropagation();
-        this.props.onClick();
     };
 
     render() {
-        console.log('ListTodos');
-        console.log(this.props.todos);
-
         return (
                 <div>
                     {this.props.todos.map((todo, i, todos) =>
@@ -33,16 +31,18 @@ class ListTodos extends Component {
                                                 console.log('selection clicked');
                                                 this.props.selected(todo);
                                                 this.props.clickedTodo(todo);
+                                                this.props.toggleCompleteTodo(todo);
                                 }}
                             >
                                 {todo.text}, {todo.selected ? 1 : 2} ({todo.id})
                                 <button onClick={() => {
-                                        console.log('deletion clicked');
                                         this.handleClick;
+                                        console.log('deletion clicked');
                                         this.props.deleteTodo(todo);
                                         this.props.deletedTodos(todo)}}>
                                     delete
                                 </button>
+                                {todo.completed ? 'COMPLETED' : 'TO DO'}
                             </li>
                     )}
                 </div>
@@ -64,7 +64,8 @@ function mapDispatchToProps(dispatch) {
         clickedTodo: bindActionCreators(clickedTodoAction, dispatch),
         selected: bindActionCreators(selectedAction, dispatch),
         deleteTodo: bindActionCreators(deleteTodoAction, dispatch),
-        deletedTodos: bindActionCreators(deletedTodosAction, dispatch)
+        deletedTodos: bindActionCreators(deletedTodosAction, dispatch),
+        toggleCompleteTodo: bindActionCreators(toggleCompleteAction, dispatch)
     }
 }
 

@@ -31,6 +31,14 @@ export function clickedTodoAction(todo) {
     }
 }
 
+export function toggleCompleteAction(todo) {
+    // console.log('action, NEW selected: ', todo);
+    return {
+        type: 'TOGGLE_COMPLETED',
+        payload: todo
+    }
+}
+
 export function deleteTodoAction(todo) {
     // console.log('removedTodoAction, todo to remove: ', todo);
     // console.log('removedTodoAction, todos: ', todos);
