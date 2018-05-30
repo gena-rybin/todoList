@@ -5,6 +5,7 @@ import ListTodosDuplicated from '../../containers/listTodosDupl';
 import NewTodo from '../../containers/new-todo';
 import SelectedTodo from '../../containers/selected-todo';
 import ListTodosDeleted from '../../containers/todos-deleted';
+import ListFilteredTodos from '../../containers/filterButtons';
 
 import {connect} from "react-redux";
 
@@ -31,6 +32,9 @@ class TodoPage extends Component {
 
                 {hr_listTodosDuplicated}
                 {listTodosDuplicated}
+
+                <hr/>
+                <ListFilteredTodos />
                 <hr/>
                 <h4>selected:</h4>
                 <SelectedTodo />

@@ -24,7 +24,7 @@ export default function (state=STARTING_TODOS, action) {
         case 'SELECTED':
             // console.log('SELECTED');
             // console.log('action', action);
-            return state.map(todo => {
+            return state.slice().map(todo => {
                 return Object.assign({}, todo, {selected: todo.id === action.payload.id});
             });
         case 'TOGGLE_COMPLETED':
@@ -41,14 +41,7 @@ export default function (state=STARTING_TODOS, action) {
             ];
         case 'ADD_TODO':
             // console.log('ADD_TODO');
-            return [
-                ...state,
-                {
-                    id: action.id,
-                    text: action.text,
-                    completed: false
-                }
-            ];
+            return state.filter((todo));
         case 'DELETE_TODO':
             // console.log('DELETE_TODO');
             // console.log(state.slice().filter(item => {

@@ -39,6 +39,15 @@ export function toggleCompleteAction(todo) {
     }
 }
 
+export function showActiveTodosAction(filter) {
+    console.log('showActiveTodosAction: ', filter);
+    // console.log('removedTodoAction, todos: ', todos);
+    return {
+        type: 'SHOW_ACTIVE_TODOS',
+        payload: filter
+    }
+}
+
 export function deleteTodoAction(todo) {
     // console.log('removedTodoAction, todo to remove: ', todo);
     // console.log('removedTodoAction, todos: ', todos);
