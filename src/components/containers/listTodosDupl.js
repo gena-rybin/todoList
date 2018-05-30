@@ -9,7 +9,7 @@ class ListTodosDuplicated extends Component {
                 <h4>duplicated:</h4>
                 {this.props.todos.map((todo) =>
                     <li key={todo.id}>
-                        {todo.text}, {todo.selected ? 1 : 2} ({todo.id}), {todo.completed ? 'COMPLETED' : 'TO DO'}
+                        {todo.text}, (id {todo.id}), {todo.completed ? 'COMPLETED' : 'TO DO'}
                     </li>
                 )}
             </div>

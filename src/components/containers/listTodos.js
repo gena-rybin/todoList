@@ -27,6 +27,9 @@ class ListTodos extends Component {
                 <div>
                     {this.props.todos.map((todo, i, todos) =>
                             <li key={todo.id}
+                                className={todo.completed ? 'completed-todo' : 'not-completed-todo'}
+                                style={{fontWeight: todo.selected ? 'bold' : 'inherit'}}
+                                            // todo.selected ? 'selected' : ''}
                                 onClick={() => {
                                                 console.log('selection clicked');
                                                 this.props.selected(todo);
@@ -34,7 +37,7 @@ class ListTodos extends Component {
                                                 this.props.toggleCompleteTodo(todo);
                                 }}
                             >
-                                {todo.text}, {todo.selected ? 1 : 2} ({todo.id})
+                                {todo.selected ? '==> ' : false} {todo.text}, (id {todo.id})
                                 <button onClick={() => {
                                         this.handleClick;
                                         console.log('deletion clicked');

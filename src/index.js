@@ -10,6 +10,8 @@ import {createStore} from "redux";
 import todoApp from "./reducers";
 import {Provider} from "react-redux";
 
+import './styles.css';
+
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Switch = ReactRouterDOM.Switch;
