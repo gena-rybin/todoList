@@ -39,12 +39,13 @@ export function toggleCompleteAction(todo) {
     }
 }
 
-export function showActiveTodosAction(filter) {
+export function showActiveCompletedTodosAction(todos, filter) {
     console.log('showActiveTodosAction: ', filter);
     // console.log('removedTodoAction, todos: ', todos);
     return {
         type: 'SHOW_ACTIVE_TODOS',
-        payload: filter
+        todos: todos,
+        filter: filter
     }
 }
 

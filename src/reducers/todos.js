@@ -42,6 +42,14 @@ export default function (state=STARTING_TODOS, action) {
         case 'ADD_TODO':
             // console.log('ADD_TODO');
             return state.filter((todo));
+        case 'SHOW_ACTIVE_TODOS':
+            console.log(111, state);
+            console.log(222, action);
+            const filtered = action.todos.slice().filter(item => {
+                return item.completed === action.filter
+            });
+            console.log(333, filtered);
+            return filtered;
         case 'DELETE_TODO':
             // console.log('DELETE_TODO');
             // console.log(state.slice().filter(item => {

@@ -1,9 +1,9 @@
 .not-completed-todo{
-    color: tomato;
+    text-decoration: none;
 }
 .completed-todo{
     text-decoration: line-through;
 }
-.selected{
-    font-weight: bold;
+.selected-todo{
+    color: tomato;
 }

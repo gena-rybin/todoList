@@ -7,7 +7,7 @@ class ClickedTodo extends Component {
         // console.log(this.props.todoSelected);
         if (this.props.todoClicked && this.props.todoClicked.text) {
             return (
-                <li>==> {this.props.todoClicked.text}</li>
+                <li>{this.props.todoClicked.text}</li>
             )
         } else {
             return (
