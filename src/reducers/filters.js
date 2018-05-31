@@ -2,10 +2,11 @@ export default function (state=[], action) {
     switch (action.type) {
         case 'SHOW_ACTIVE_TODOS':
             console.log(111, state);
-            const filtered = state.slice().filter(item => {
-                return item.completed === action.payload
+            console.log(222, action);
+            const filtered = action.todos.slice().filter(item => {
+                return item.completed === action.filter
             });
-            console.log(filtered);
+            console.log(333, filtered);
             return filtered;
         default: return state;
     }
