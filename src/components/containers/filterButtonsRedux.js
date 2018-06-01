@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
-import {showActiveCompletedTodosAction} from '../../actions'  // new "state", because "reducer" is in separate file from todos.js and added in combineReducers
+import {showActiveCompletedTodosAction} from '../../actions'
+import filters from "../../reducers/filters";  // new "state", because "reducer" is in separate file from todos.js and added in combineReducers
 
 class FilterButtonsTodos extends Component {
 
@@ -21,6 +22,13 @@ class FilterButtonsTodos extends Component {
     render() {
         return (
             <div>
+                <h4>filtered:</h4>
+                {this.props.todosFiltered.map((todo) =>
+                    <li key={todo.id}>
+                        {todo.text}, (id {todo.id}), {todo.completed ? 'COMPLETED' : 'TO DO'}
+                    </li>
+                )}
+                <br/>
                 <button onClick={() => {
                     // this.handleClick;
                     console.log('show_active clicked');
@@ -43,6 +51,8 @@ class FilterButtonsTodos extends Component {
 function mapStateToProps(state) {
     return {
         todos: state.todos,
+        todosFiltered: state.filters,
+
         // todoSelected: state.todoSelected,
         // todoRemoved: state.todoRemoved
     }
