@@ -2,14 +2,14 @@ const STARTING_TODOS = [
     {
         id: 1,
         text: 'notify Idle',
-        completed: false,
+        completed: true,
         selected: false
     },
     {
         id: 2,
         text: 'continue Redux-course',
         completed: false,
-        selected: false
+        selected: true
     },
     {
         id: 3,

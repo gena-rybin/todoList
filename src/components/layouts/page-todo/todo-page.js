@@ -6,6 +6,7 @@ import NewTodo from '../../containers/new-todo';
 import SelectedTodo from '../../containers/selected-todo';
 import ListTodosDeleted from '../../containers/todos-deleted';
 import FilterButtonsTodos from '../../containers/filterButtonsRedux';
+import _SelectedTodosList from '../../containers/_SelectedTodosList';
 
 import {connect} from "react-redux";
 
@@ -29,6 +30,9 @@ class TodoPage extends Component {
 
                 <NewTodo />
                 <ListTodos />
+
+                <hr/>
+                <_SelectedTodosList />
 
                 <hr/>
                 <FilterButtonsTodos />
