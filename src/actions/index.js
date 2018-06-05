@@ -66,3 +66,9 @@ export function deletedTodosAction(todo) {
         payload: todo
     }
 }
+
+export const setVisibilityFilter = (filter) => ({
+    type: 'SET_VISIBILITY_FILTER',
+    filter
+});
+

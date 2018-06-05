@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux';
 import SelectedTodosSelector from '../../selector/getVisibleTodos';
 import {
+    setVisibilityFilter,
     clickedTodoAction,
     deletedTodosAction,
     deleteTodoAction,
@@ -10,14 +11,18 @@ import {
     toggleCompleteAction
 } from "../../actions";
 
+
 class SelectedTodosList extends Component {
 
     render() {
-        console.log(555);
+        if (!this.props.todos) {
+            return null;
+        }
+        console.log('*** 333 from container:');
         console.log(this);
         return (
             <div>
-                {this.props.todos.map(todo => {
+                {this.props.todos.map(todo =>
                     <li key={todo.id}
                         className={`${todo.completed ? 'completed-todo' : 'not-completed-todo'}
                                 ${todo.selected ? 'selected-todo' : false}`}
@@ -40,7 +45,20 @@ class SelectedTodosList extends Component {
                         {/*</button>*/}
                         {/*{todo.completed ? 'COMPLETED' : 'TO DO'}*/}
                     </li>
-                })}
+                )}
+                <button onClick={() => {
+                    this.props.setVisibilityFilter('SHOW_ALL')}}>
+                    all
+                </button>
+                <button onClick={() => {
+                    this.props.setVisibilityFilter('SHOW_ACTIVE')}}>
+                    active
+                </button>
+                <button onClick={() => {
+                    this.props.setVisibilityFilter('SHOW_COMPLETED')}}>
+                    completed
+                </button>
+
             </div>
         );
 
@@ -48,7 +66,7 @@ class SelectedTodosList extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(777);
+    console.log('*** 111 from mapStateToProps:');
     console.log(state);
     return {
         todos: SelectedTodosSelector(state),
@@ -59,6 +77,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        setVisibilityFilter: bindActionCreators(setVisibilityFilter, dispatch),
         clickedTodo: bindActionCreators(clickedTodoAction, dispatch),
         selected: bindActionCreators(selectedAction, dispatch),
         deleteTodo: bindActionCreators(deleteTodoAction, dispatch),
