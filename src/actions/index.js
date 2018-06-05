@@ -6,8 +6,12 @@ let todoId = 10;
 export function newToDoAction (text) {
     let newToDo = {
         type: 'ADD_TODO',
-        id: ++todoId,
-        text: text
+        payload: {
+            id: ++todoId,
+            text: text,
+            completed: false,
+            selected: false
+        }
     };
     console.log('new todo - ', newToDo);
     return newToDo;

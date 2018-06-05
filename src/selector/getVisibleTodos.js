@@ -16,11 +16,11 @@ const getVisibleTodos = (todos, visibilityFilter) => {
     console.log(todos, visibilityFilter);
     switch (visibilityFilter) {
       case 'SHOW_ALL':
-        return todos;
+        return todos.slice();
       case 'SHOW_COMPLETED':
-        return todos.filter(t => t.completed === true);
+        return todos.slice().filter(t => t.completed === true);
       case 'SHOW_ACTIVE':
-        return todos.filter(t => t.completed === false);
+        return todos.slice().filter(t => t.completed === false);
         default: return todos;
     }
 };

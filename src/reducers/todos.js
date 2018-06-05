@@ -40,8 +40,10 @@ export default function (state=STARTING_TODOS, action) {
                 ...state
             ];
         case 'ADD_TODO':
-            // console.log('ADD_TODO');
-            return state.filter((todo));
+            return [
+                ...state,
+                action.payload
+            ];
         // case 'SHOW_ACTIVE_TODOS':
         //     console.log(111, state);
         //     console.log(222, action);
