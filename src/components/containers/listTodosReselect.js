@@ -12,7 +12,7 @@ import {
 } from "../../actions";
 
 
-class SelectedTodosList extends Component {
+class ListTodosReselect extends Component {
 
     render() {
         if (!this.props.todos) {
@@ -22,6 +22,7 @@ class SelectedTodosList extends Component {
         console.log(this);
         return (
             <div>
+                <h4>reselect:</h4>
                 {this.props.todos.map(todo =>
                     <li key={todo.id}
                         className={`${todo.completed ? 'completed-todo' : 'not-completed-todo'}
@@ -86,4 +87,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SelectedTodosList);
+export default connect(mapStateToProps, mapDispatchToProps)(ListTodosReselect);
